@@ -1,0 +1,57 @@
+body {
+    background-color: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 3D Card with Shadow Effects */
+.card {
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(135deg, #f0f0f0, #fff);
+    border-radius: 15px;
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.1), -8px -8px 20px rgba(0, 0, 0, 0.05);
+    transform: perspective(1200px) rotateY(12deg) rotateX(6deg);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: perspective(1200px) rotateY(0deg) rotateX(0deg) scale(1.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3), -20px -20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+    font-size: 35px;
+    color: #333;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+    font-size: 18px;
+    color: #777;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Shadow effect for text */
+.card h1, .card p {
+    transition: all 0.3s ease;
+}
+
+.card:hover h1 {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover p {
+    color: #444;
+}

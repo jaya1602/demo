@@ -1,0 +1,113 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+.dashboard-header {
+    background-color: #005f73;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+}
+
+.dashboard-header nav a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dashboard-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+}
+
+/* Summary Cards */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 24px;
+    color: #0077b6;
+}
+
+/* Charts Section */
+.charts-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-placeholder {
+    background-color: #d3d3d3;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Table Section */
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-section table th, 
+.table-section table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table-section table th {
+    background-color: #005f73;
+    color: white;
+}
+
+.table-section table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

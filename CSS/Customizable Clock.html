@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Clock</title>
+    <link rel="stylesheet" href="Customizable Clock.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="time" id="time"></div>
+        <div class="date" id="date"></div>
+
+        <div class="customization">
+            <div>
+                <label for="bgColor">Background:</label>
+                <input type="color" id="bgColor" value="#74ebd5">
+            </div>
+            <div>
+                <label for="textColor">Text Color:</label>
+                <input type="color" id="textColor" value="#333333">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const timeElement = document.getElementById('time');
+        const dateElement = document.getElementById('date');
+        const bgColorPicker = document.getElementById('bgColor');
+        const textColorPicker = document.getElementById('textColor');
+
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const day = now.toLocaleDateString('en-us', { weekday: 'long' });
+            const date = now.toLocaleDateString('en-us', { month: 'long', day: 'numeric', year: 'numeric' });
+
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+            dateElement.textContent = `${day}, ${date}`;
+        }
+
+        function applyCustomizations() {
+            document.body.style.background = bgColorPicker.value;
+            timeElement.style.color = textColorPicker.value;
+            dateElement.style.color = textColorPicker.value;
+        }
+
+        bgColorPicker.addEventListener('input', applyCustomizations);
+        textColorPicker.addEventListener('input', applyCustomizations);
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

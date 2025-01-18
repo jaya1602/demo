@@ -1,0 +1,81 @@
+body {
+    font-family:'Arial', sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f4f9;
+    color:#333;
+}
+
+header {
+    background:linear-gradient(90deg,#0078D7, #00c6ff);
+    color:#f4f4f9;
+    padding:2rem;
+    text-align:center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #0053ba;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin:0 1rem;
+    font-size: 1.1rem;
+}
+
+nav a:hover{
+    color:#ffdd57;
+}
+
+.section{
+    padding:2rem;
+    text-align: center;
+}
+
+#projects.card{
+    display: inline-block;
+    width:300px;
+    margin:1rem;
+    padding:1rem;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 4px 8px rgda(0, 0, 0.1);
+    transition:transform 0.2s;
+}
+
+#project .card:hover {
+    transform:scale(1.05);
+}
+
+#contact form input, 
+#contact form textarea {
+   width:80%;
+   margin:0.5rem 0;
+   padding:0.8rem;
+   border:1px solid #ccc;
+   border-radius: 4px;
+}
+
+#contact form button {
+    padding:0.8rem 2rem;
+    background:#0078D7;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+#contact form button:hover {
+    background: #0053ba
+}
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:1rem;
+}
